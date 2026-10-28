@@ -11,7 +11,7 @@ Hasil sesi Dana masuk ke sini: prototype HTML ke `prototype/`; job story, priori
 Tanpa Terminal. Cukup Finder, Xcode, dan agen.
 
 1. **Unduh.** Buka link/QR starter dari grup WhatsApp, klik tombol hijau **Code › Download ZIP**, double-click ZIP-nya di Downloads, lalu ganti nama foldernya jadi `kelompok-N` (N = nomor kelompok). Cukup di **satu Mac** per kelompok.
-2. **Buka dan jalankan.** Double-click `Prototipe.xcodeproj` (kalau Xcode bertanya karena proyek diunduh dari internet, pilih **Open**). Pilih simulator iPhone 17 Pro, **⌘R**: layar "Contoh" tampil. **⌘U**: semua test lulus.
+2. **Buka dan jalankan.** Double-click `Prototipe.xcodeproj` (kalau Xcode bertanya karena proyek diunduh dari internet, pilih **Open**). Pilih simulator iPhone terbaru di daftar, **⌘R**: layar "Contoh" tampil. **⌘U**: semua test lulus.
 3. **Nyalakan git.** Xcode › **Integrate › New Git Repository…** › Create. Setelah itu commit lewat Xcode › Integrate › Commit (⌥⌘C).
 
 Lalu, **sekali per Mac**, impor skill: Xcode › Settings › Intelligence › **Plug-ins** › **Add Plug-in** › folder lokal › pilih folder `skills/` di repo ini. Xcode membagikannya ke semua agen di Xcode. Langkah lengkap (agen, login, izin, iPhone): **`docs/mulai-di-xcode.md`**.

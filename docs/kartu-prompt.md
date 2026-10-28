@@ -163,7 +163,11 @@ Setelah selesai, tambahkan satu entri di docs/DECISIONS.md: apa yang diubah, ken
 Buat 3 screenshot gaya App Store dan 1 video demo 20–30 detik dari alur utama app ini. Baca AGENTS.md, lalu ikuti skill app-demo-media. Simulator, status bar 9:41, data dummy saja. Headline Bahasa Indonesia, maksimal 5 kata, tentang manfaat. Jangan upload apa pun. Jangan pasang tool global tanpa bertanya.
 ```
 
-Hasilnya di marketing/framed/ dan marketing/video/. Status bar rapi: bash scripts/simulator-demo.sh rapikan.
+Hasilnya di marketing/raw/ (screenshot), marketing/framed/ (kalau skill framing tersedia), dan marketing/video/demo-raw.mov.
+
+Sebelum P15, pastikan `xcrun`, `mkdir`, dan `mdls` ada di Allowed Commands agen (Xcode › Settings › Intelligence › Permissions; lihat docs/mulai-di-xcode.md langkah 3). Simulator harus sudah jalan dari ⌘R terakhir. Agen pertama membaca docs/userflow.md untuk tahu alur yang direkam.
+
+Agen gagal merekam? Cadangan tanpa agen: di jendela Simulator (Device Hub) ada tombol rekam dan tombol screenshot di toolbar bawah. Satu orang menjalankan alur 20–30 detik, lalu simpan file-nya ke marketing/video/.
 
 ## Kalau agen meleset
 

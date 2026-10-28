@@ -16,14 +16,18 @@ Output: 3 screenshots of the key moments of the main user flow, and one 20 to 30
 - Do not install global tools (`npm -g`, `brew`, `pip`) yourself. Name the command and let the user run it.
 - Do not change app code, except dummy data or a screenshot-only launch argument, and ask first.
 
+## 0. If you cannot run shell commands
+
+Agents inside Xcode can only run commands the user has allowed (Xcode › Settings › Intelligence › Permissions › Allowed Commands). If `xcrun` is refused: stop, tell the user in one line to add `xcrun`, `mkdir` and `mdls` there, and wait. Do not look for another way to record. If the user cannot allow it, fall back to: run the app with Xcode tools, walk the flow with `DeviceInteraction` or MobileBuildMCP, and ask the user to press the record button and the screenshot button in the Simulator window (Device Hub) while you drive the flow; then write the report in section 5 with the files the user saved.
+
 ## 1. Prepare
 
 1. Read `AGENTS.md` and `userflow.md` to find the main flow (for example: buat tagihan > pilih teman > kirim pengingat).
-2. Find or boot a simulator. Prefer iPhone 17 Pro (1206 x 2622, accepted by the App Store without resizing).
+2. Find or boot a simulator. Use the one already booted from the last Xcode run; otherwise prefer the newest iPhone Pro in the list (iPhone 17 Pro or 18 Pro, 1206 x 2622, accepted by the App Store without resizing).
 
 ```bash
 xcrun simctl list devices booted
-xcrun simctl boot "iPhone 17 Pro"   # only if none is booted
+xcrun simctl boot "iPhone 17 Pro"   # only if none is booted; use the newest iPhone Pro name from `xcrun simctl list devices available`
 ```
 
 3. Build and run the app on that simulator (Xcode MCP tools, MobileBuildMCP, the `run-simulator` skill, or `xcodebuild`). If the build fails, stop and report the first error.

@@ -15,7 +15,7 @@ Mentor punya cadangan lewat Terminal (`scripts/mulai.sh`) kalau ada yang macet.
 
 ## 2. Cek kesehatan
 
-1. Di toolbar pilih scheme **Prototipe** dan simulator **iPhone 17 Pro**.
+1. Di toolbar pilih scheme **Prototipe** dan simulator iPhone terbaru di daftar (iPhone 17 Pro atau 18 Pro, tergantung versi Xcode).
 2. **⌘R**: layar "Contoh" tampil dengan tiga baris.
 3. **⌘U**: semua test lulus. "0 tests" berarti scheme salah.
 4. Xcode › Settings › **Source Control**: matikan **Add and remove files automatically**. Supaya file berisi kunci tidak ikut ter-stage tanpa sengaja.
@@ -26,7 +26,7 @@ Agen peserta adalah **Antigravity** (Google), dengan lisensi Gemini BRI. Claude 
 
 1. Xcode › Settings › **Intelligence** › **Agents** › **Antigravity** › **Get** › **Install**.
 2. Login: klik **…** di baris **Account**, ikuti sheet dan browser. Masuk dengan **akun Google yang membawa lisensi Gemini BRI**. (Asumsi: lisensi itu bisa dipakai di Antigravity; dicek di hari uji.)
-3. **Permissions**: tambahkan `git` dan `swiftlint` di **Allowed Commands**. Tool Xcode (build, test, preview, Simulator) sudah termasuk.
+3. **Permissions**: tambahkan `git`, `swiftlint`, `xcrun`, `mkdir`, dan `mdls` di **Allowed Commands**. Tool Xcode (build, test, preview, Simulator) sudah termasuk. `xcrun` dipakai agen untuk merekam video dan mengambil screenshot Simulator (P15); tanpa ini, agen akan minta izin tiap kali atau gagal merekam.
 
 Login gagal atau menu Intelligence kosong? Jangan lebih dari 5 menit. Beri tahu fasilitator F3, lalu pakai cadangan berurutan:
 
