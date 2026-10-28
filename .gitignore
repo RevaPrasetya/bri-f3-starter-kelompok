@@ -1,0 +1,29 @@
+# Xcode: data per pengguna dan hasil build
+xcuserdata/
+DerivedData/
+build/
+*.xcresult
+.DS_Store
+
+# Kunci lokal. Semua .xcconfig diabaikan kecuali dua file yang aman di-commit,
+# supaya salinan berisi kunci (misalnya Config/Supabase.xcconfig) tidak ikut ter-commit.
+*.xcconfig
+!Config/Proyek.xcconfig
+!Config/Supabase.example.xcconfig
+.env
+.env.*
+
+# Salinan skill untuk agen di luar Xcode (dibuat scripts/pasang-skill.sh; sumbernya skills/)
+.agents/skills/
+.kiro/skills/
+.claude/skills/
+
+# Ekspor prototype React (v0, Lovable) di prototype/: dependensinya tidak di-commit
+node_modules/
+
+# Persetujuan lokal agen
+.claude/settings.local.json
+
+# Hasil screenshot dan video dari agen (skill app-demo-media)
+marketing/
+media/out/

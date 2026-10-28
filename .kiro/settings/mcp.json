@@ -1,0 +1,45 @@
+{
+  "mcpServers": {
+    "MobileBuildMCP": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mobilebuildmcp@2.7.1",
+        "mcp"
+      ],
+      "env": {
+        "MOBILEBUILDMCP_SENTRY_DISABLED": "true"
+      },
+      "disabled": false,
+      "autoApprove": []
+    },
+    "sosumi": {
+      "url": "https://sosumi.ai/mcp",
+      "disabled": false,
+      "autoApprove": []
+    },
+    "xcode": {
+      "command": "xcrun",
+      "args": [
+        "mcpbridge"
+      ],
+      "disabled": true,
+      "autoApprove": []
+    },
+    "figma": {
+      "url": "https://mcp.figma.com/mcp",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "context7": {
+      "url": "https://mcp.context7.com/mcp",
+      "disabled": true,
+      "autoApprove": []
+    },
+    "supabase": {
+      "url": "https://mcp.supabase.com/mcp?project_ref=ISI_PROJECT_REF&read_only=true",
+      "disabled": true,
+      "autoApprove": []
+    }
+  }
+}

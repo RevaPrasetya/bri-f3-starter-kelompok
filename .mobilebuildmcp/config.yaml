@@ -1,0 +1,15 @@
+# Salin ke repo kelompok sebagai: .mobilebuildmcp/config.yaml
+# (Kalau masih memakai paket lama xcodebuildmcp@2.7.0, letakkan di .xcodebuildmcp/config.yaml.)
+# Kunci yang tidak dikenal membuat server gagal start, jadi jangan menambah kunci sembarangan.
+# Contoh lengkap: config.example.yaml di github.com/getsentry/MobileBuildMCP
+schemaVersion: 1
+enabledWorkflows: ['simulator', 'ui-automation', 'project-discovery']
+sentryDisabled: true          # matikan telemetri error ke Sentry
+debug: false
+sessionDefaults:
+  projectPath: './Prototipe.xcodeproj'
+  scheme: 'Prototipe'
+  configuration: 'Debug'
+  simulatorName: 'iPhone 17 Pro'          # cek nama yang ada: xcrun simctl list devices available
+  useLatestOS: true
+  platform: 'iOS'
