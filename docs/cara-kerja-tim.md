@@ -1,15 +1,16 @@
 # Cara kerja tim
 
-Satu **Mac build** per kelompok, layarnya ditampilkan ke tim. Agen mengedit kode hanya di Mac itu. Peran digilir di setiap checkpoint.
+Satu **Mac** per kelompok, layarnya ditampilkan ke tim. Agen mengedit kode hanya di Mac itu. Peran digilir di setiap checkpoint.
 
 ## Peran
 
 | Peran | Tugas |
 | --- | --- |
-| **Operator AI** | Satu-satunya yang mengetik ke agen. Hanya satu percakapan agen yang mengedit file pada satu waktu. Commit setiap build hijau |
-| **Reviewer** | Membaca setiap diff sebelum commit. Menolak solusi "asal jalan": force unwrap, `@unchecked Sendable`, test dilemahkan, perubahan di luar task. Saat agen meleset, menambah satu baris aturan di `AGENTS.md` |
-| **Tester** | Mengecek empat state (berhasil, memuat, kosong, gagal) di Simulator atau iPhone sendiri. Menulis bug di `bugs/` (salin `bugs/_template.md`) dan satu baris di `docs/context-gaps.md` setiap agen salah |
-| **Navigator** | Menjaga job story dan scope (hanya Must). Mengurutkan `docs/tasks.md`, memilih task berikutnya, memotong scope kalau waktu habis |
+| **Operator AI** | Satu-satunya yang mengetik ke agen. Hanya satu percakapan agen yang mengedit file pada satu waktu. Menjelaskan setiap perubahan ke tim sebelum commit (P9), menolak solusi "asal jalan": force unwrap, `@unchecked Sendable`, test dilemahkan. Commit setiap build hijau |
+| **Tester** | Mengecek empat state (berhasil, memuat, kosong, gagal) di Simulator atau iPhone sendiri. Menulis bug di `bugs/` (salin `bugs/_template.md`) dan satu baris di `docs/context-gaps.md` setiap agen salah. Saat agen meleset, menambah satu baris aturan di `AGENTS.md` |
+| **Product Owner** | Menjaga job story dan scope (hanya Must). Membaca rencana agen dan mencoret yang di luar task. Mengurutkan `docs/tasks.md`, memilih task berikutnya, memotong scope kalau waktu habis |
+
+Tiga peran ini masih **draf** (usulan F3, dikonfirmasi dengan Kak Dana). Kelompok berlima: dua Tester.
 
 ## Rotasi
 
@@ -17,14 +18,14 @@ Peran bergeser satu orang di setiap checkpoint: **13.25 · 14.30 · 15.30 · 16.
 
 **Yang menulis prompt, dia yang menjelaskan hasilnya.** Sebelum commit, Operator menjelaskan ke kelompok apa yang diubah agen dan kenapa, dengan kata-katanya sendiri. Kalau belum bisa menjelaskan, belum commit: minta agen menjelaskan diff-nya dulu.
 
-Setelah rotasi, Operator yang baru menulis peran saat ini di awal prompt, misalnya: "Operator: Ayu · Reviewer: Dedi · Tester: Sari · Navigator: Budi." Agen lalu tahu kepada siapa diff dan cara uji ditunjukkan.
+Setelah rotasi, Operator yang baru menulis peran saat ini di awal prompt, misalnya: "Operator: Ayu · Tester: Sari · Product Owner: Budi." Agen lalu tahu kepada siapa diff dan cara uji ditunjukkan.
 
 ## Aturan
 
-- Satu Mac build. Satu percakapan agen yang mengedit.
+- Satu Mac. Satu percakapan agen yang mengedit.
 - Commit setiap build hijau, setelah hasil test terbaca. Pesan commit: apa · kenapa · dampak · nama Operator, misalnya "Bagi rata dengan empat state · task T5b · alur utama lengkap · Operator: Ayu". Di showcase, `git log` menunjukkan siapa membangun bagian mana.
 - Push sekitar tiap 30 menit dan di setiap checkpoint (Xcode › Integrate › Push).
-- `git status` sebelum commit. `Config/Supabase.xcconfig` dan `.env` tidak boleh ikut. `scripts/cek-rahasia.sh` juga menolaknya.
+- Cek daftar file sebelum commit (Xcode › Integrate › Commit). `Config/Supabase.xcconfig` dan `.env` tidak boleh ikut.
 - Agen meleset? Perbaiki konteksnya (`AGENTS.md`, `DESIGN.md`, `docs/`), bukan prompt-nya.
 
 ## Laptop kedua (sidecar)
@@ -44,7 +45,7 @@ Hanya untuk kelompok dengan **dua dev Swift yang yakin**.
 
 1. Jangan `--force` dan jangan menghapus folder.
 2. Konflik di file Swift atau Markdown: buka file itu, pilih isi yang benar, hapus tanda `<<<<<<<`, `=======`, `>>>>>>>`. Build dan test, lalu `git add <file>` dan `git rebase --continue`.
-3. Boleh minta agen: "Ada merge conflict di <file>. Jelaskan dua versinya. Jangan pilih sendiri." Reviewer yang memutuskan.
+3. Boleh minta agen: "Ada merge conflict di <file>. Jelaskan dua versinya. Jangan pilih sendiri." Product Owner yang memutuskan.
 4. Konflik di `project.pbxproj`: jangan diedit dengan tangan. `git rebase --abort`, lalu panggil mentor. Biasanya tanda pembagian folder dilanggar.
 5. Ragu? `git rebase --abort` mengembalikan keadaan sebelum pull.
 

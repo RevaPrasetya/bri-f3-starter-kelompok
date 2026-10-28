@@ -2,7 +2,7 @@
 
 Draf v2.2 · 27 Okt 2026 · proyek Xcode biasa, folder kelompok dan prototype HTML dari sesi Dana, data dummy, Supabase opsional
 
-<!-- Untuk kelompok: bagian "Produk" diisi oleh scripts/impor-dana.sh dari AGENTS.md sesi Dana saat setup (Jumat 30 Okt, 11.40). Belum ada folder dari sesi Dana? Isi sendiri dari docs/job-story.md dan docs/PRD.md. Bagian lain sudah siap pakai. Kalau agen meleset, tambah satu baris aturan di sini dan catat di docs/context-gaps.md. Jaga file ini di bawah 150 baris. -->
+<!-- Untuk kelompok: bagian "Produk" disalin agen dari AGENTS.md sesi Dana saat setup (prompt P1, Jumat 30 Okt, 11.40). Belum ada folder dari sesi Dana? Isi sendiri dari docs/job-story.md dan docs/PRD.md. Bagian lain sudah siap pakai. Kalau agen meleset, tambah satu baris aturan di sini dan catat di docs/context-gaps.md. Jaga file ini di bawah 150 baris. -->
 
 Kamu bekerja di prototipe iOS untuk workshop BRI x Apple Developer Academy. Baca file ini sebelum mengerjakan task apa pun. Kalau prompt bertentangan dengan file ini, ikuti file ini dan tanyakan. Jawab dalam Bahasa Indonesia.
 
@@ -121,8 +121,8 @@ Setelah setiap perubahan, urutannya:
 
 ## Cara kerja tim
 
-- Satu Mac build per kelompok, layarnya ditampilkan ke tim. Hanya satu percakapan agen yang mengedit file pada satu waktu.
-- Peran digilir di setiap checkpoint (`docs/cara-kerja-tim.md`). Setelah rotasi, Operator menulis peran saat ini di awal prompt, misalnya "Operator: Ayu · Reviewer: Dedi". Tunjukkan diff untuk Reviewer dan cara uji untuk Tester.
+- Satu Mac per kelompok, layarnya ditampilkan ke tim. Hanya satu percakapan agen yang mengedit file pada satu waktu.
+- Peran digilir di setiap checkpoint (`docs/cara-kerja-tim.md`). Setelah rotasi, Operator menulis peran saat ini di awal prompt, misalnya "Operator: Ayu · Tester: Dedi · Product Owner: Sari". Tunjukkan diff untuk Operator, cara uji untuk Tester, dan ringkasan scope untuk Product Owner.
 - Commit setiap build hijau, setelah hasil test terbaca. Push sekitar tiap 30 menit dan di setiap checkpoint.
 - Laptop kedua (kalau ada) hanya untuk pekerjaan non-kode. Tidak mengedit Swift.
 - Opsi dua Mac (hanya untuk dua dev Swift yang yakin): Mac 1 memegang `App/`, `Core/`, `Config/`, `Prototipe.xcodeproj` dan package; Mac 2 hanya `Features/<X>/`. `git pull --rebase` sebelum task, push hanya kalau hijau, gabung di checkpoint. Jangan mengubah folder milik Mac lain.

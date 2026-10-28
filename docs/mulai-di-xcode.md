@@ -1,18 +1,17 @@
 # Mulai di Xcode
 
-Untuk Mac build kelompok, sekitar 15 menit. Butuh Xcode 27 dan Mac Apple silicon. Tidak perlu Homebrew atau akun developer berbayar.
+Untuk Mac kelompok, sekitar 15 menit. Butuh Xcode 27 dan Mac Apple silicon. Tidak perlu Homebrew atau akun developer berbayar.
 
 ## 1. Buka proyek
 
-1. Unduh repo: Xcode › Integrate › **Clone…** lalu tempel URL dari panitia, atau unduh ZIP dari link/QR di grup WhatsApp dan ekstrak, misalnya ke `~/Developer/kelompok-3`.
-2. Sekali saja, di Terminal dari folder repo. Buka Terminal (⌘Space, ketik Terminal, Return), ketik `cd` dan spasi, seret folder repo dari Finder ke jendela Terminal, lalu Return. Setelah itu:
+Tanpa Terminal.
 
-   ```bash
-   bash scripts/mulai.sh "Nama App" 3
-   ```
+1. Unduh ZIP dari link/QR di grup WhatsApp (tombol hijau **Code › Download ZIP**), double-click ZIP-nya, ganti nama foldernya jadi `kelompok-N`. Atau: Xcode › Integrate › **Clone…** dengan URL dari panitia.
+2. Double-click `Prototipe.xcodeproj`. Kalau Xcode bertanya karena proyek diunduh dari internet, pilih **Open**.
+3. Xcode › **Integrate › New Git Repository…** › Create (tidak perlu kalau tadi Clone). Commit nanti lewat Xcode › Integrate › Commit (⌥⌘C).
+4. Nama app dan bundle ID (`id.workshop.f3.kelompokN`) diganti agen lewat prompt P1 di `docs/kartu-prompt.md`, atau dengan tangan di `Config/Proyek.xcconfig` lalu ⌘B.
 
-   Angka = nomor kelompok. Script mengisi nama app dan bundle ID (`id.workshop.f3.kelompok3`) di `Config/Proyek.xcconfig`, menyiapkan git dan pengecek rahasia, lalu membuka Xcode.
-3. Kalau Xcode belum terbuka: double-click `Prototipe.xcodeproj`. Kalau Xcode bertanya karena proyek diunduh dari internet, pilih **Open**.
+Mentor punya cadangan lewat Terminal (`scripts/mulai.sh`) kalau ada yang macet.
 
 ## 2. Cek kesehatan
 
@@ -75,7 +74,7 @@ Simulator dan iPhone sama-sama boleh untuk showcase.
 1. Xcode › Settings › **Apple Accounts** › tambah Apple ID. Muncul tim **(Personal Team)**.
 2. iPhone (iOS 17+), tersambung ke Mac: Settings › Privacy & Security › **Developer Mode** › nyalakan (iPhone restart).
 3. Target **Prototipe** › **Signing & Capabilities** › centang **Automatically manage signing** › Team: **(Personal Team)**.
-4. Bundle ID ditolak karena sudah dipakai? Jangan ubah kolom Bundle Identifier. Jalankan `bash scripts/mulai.sh "Nama App" 3 ayu` (akhiran = inisial), atau ubah `BUNDLE_ID_DASAR` di `Config/Proyek.xcconfig`.
+4. Bundle ID ditolak karena sudah dipakai? Jangan ubah kolom Bundle Identifier. Tambahkan akhiran inisial di `BUNDLE_ID_DASAR` di `Config/Proyek.xcconfig` (misalnya `id.workshop.f3.kelompok3.ayu`), atau minta agen: "Tambahkan akhiran .ayu ke BUNDLE_ID_DASAR di Config/Proyek.xcconfig, lalu build."
 5. Pilih iPhone di toolbar › **⌘R**. Pertama kali: iPhone › Settings › General › **VPN & Device Management** › percayai developer kalian.
 
 Batas Personal Team: app kedaluwarsa setelah 7 hari, maksimal 3 perangkat, tanpa TestFlight. TestFlight hanya demo fasilitator.
@@ -91,7 +90,7 @@ Batas Personal Team: app kedaluwarsa setelah 7 hari, maksimal 3 perangkat, tanpa
 | "0 tests" | Pilih scheme Prototipe di toolbar |
 | Preview hanya menampilkan memuat | Wajar untuk data async. Cek di Simulator (⌘R) atau lewat test |
 | Error preview `__designTimeSelection` | Minta agen mengganti method reference dengan closure di view |
-| Agen macet atau tidak bisa build | `bash scripts/cek-build.sh` di Terminal, kirim error pertamanya ke grup |
+| Agen macet atau tidak bisa build | Salin error pertama dari Issue Navigator (⌘5) ke grup. Mentor bisa menjalankan `scripts/cek-build.sh` |
 | Push gagal dari agen | Xcode › Integrate › Push |
 
 Catat pesan error lengkap (teks, bukan foto layar kalau bisa).

@@ -6,7 +6,7 @@ Draf v1 · 14 Okt 2026 · masih bisa diperbarui
 
 - Satu entri per keputusan yang mengubah perilaku app, scope, atau arsitektur. Perubahan kecil tidak perlu dicatat.
 - Entri terbaru di bawah, supaya agen cukup menambah di akhir file.
-- Boleh ditulis agen ("Setelah selesai, tambahkan satu entri di DECISIONS.md"), tapi Reviewer yang memeriksa.
+- Boleh ditulis agen ("Setelah selesai, tambahkan satu entri di DECISIONS.md"), tapi Operator yang memeriksa.
 - Commit message memakai format: apa · kenapa · dampak.
 
 Hapus contoh setelah kalian menulis entri pertama. -->

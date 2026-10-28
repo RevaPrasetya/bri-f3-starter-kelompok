@@ -8,32 +8,22 @@ Hasil sesi Dana masuk ke sini: prototype HTML ke `prototype/`; job story, priori
 
 ## Mulai dalam 3 langkah (Jumat 30 Okt, 11.40)
 
-1. **Unduh.** Xcode › Integrate › **Clone…** (URL dari panitia), atau unduh ZIP dari link/QR di grup WhatsApp lalu ekstrak, misalnya ke `~/Developer/kelompok-3`. Cukup di **satu Mac build** per kelompok.
-2. **Siapkan sekali**, di Terminal dari folder repo:
+Tanpa Terminal. Cukup Finder, Xcode, dan agen.
 
-   ```bash
-   bash scripts/mulai.sh "Nama App Kalian" 3
-   ```
-
-   Angka = nomor kelompok. Script mengisi nama app dan bundle ID (`id.workshop.f3.kelompok3`) di `Config/Proyek.xcconfig`, menyiapkan git dan pengecek rahasia, lalu membuka Xcode. Tidak perlu Homebrew atau tool lain.
-3. **Jalankan.** Buka `Prototipe.xcodeproj` (double-click), pilih simulator iPhone 17 Pro, **⌘R**: layar "Contoh" tampil. **⌘U**: semua test lulus.
+1. **Unduh.** Buka link/QR starter dari grup WhatsApp, klik tombol hijau **Code › Download ZIP**, double-click ZIP-nya di Downloads, lalu ganti nama foldernya jadi `kelompok-N` (N = nomor kelompok). Cukup di **satu Mac** per kelompok.
+2. **Buka dan jalankan.** Double-click `Prototipe.xcodeproj` (kalau Xcode bertanya karena proyek diunduh dari internet, pilih **Open**). Pilih simulator iPhone 17 Pro, **⌘R**: layar "Contoh" tampil. **⌘U**: semua test lulus.
+3. **Nyalakan git.** Xcode › **Integrate › New Git Repository…** › Create. Setelah itu commit lewat Xcode › Integrate › Commit (⌥⌘C).
 
 Lalu, **sekali per Mac**, impor skill: Xcode › Settings › Intelligence › **Plug-ins** › **Add Plug-in** › folder lokal › pilih folder `skills/` di repo ini. Xcode membagikannya ke semua agen di Xcode. Langkah lengkap (agen, login, izin, iPhone): **`docs/mulai-di-xcode.md`**.
 
 ## Masih di setup
 
-4. **Impor folder kelompok dari sesi Dana.** Folder itu berisi `AGENTS.md`, `DESIGN.md`, `docs/` (job story, user flow, PRD, tasks) dan `prototype/index.html`. Dari folder repo ini:
-
-   ```bash
-   bash scripts/impor-dana.sh ~/Desktop/NamaFolderKelompok
-   ```
-
-   Script menyalin `docs/*.md`, `DESIGN.md`, `prototype/`, dan bagian **Produk** dari `AGENTS.md` Dana ke repo ini, lalu commit. Aturan lain di `AGENTS.md` starter tetap. Versi starter yang tertimpa disimpan di `docs/_starter/`. Detail dan kalau prototype-nya hanya link: `prototype/README.md`.
+4. **Masukkan folder kelompok dari sesi Dana.** Folder itu berisi `AGENTS.md`, `DESIGN.md`, `docs/` (job story, user flow, PRD, tasks) dan `prototype/index.html`. Di Finder, buka folder Dana dan folder repo ini berdampingan, lalu seret **`docs/`**, **`DESIGN.md`**, dan **`prototype/`** dari folder Dana ke folder repo. Kalau Finder bertanya, pilih **Replace**. `AGENTS.md` Dana jangan diseret: minta agen menyalin bagian **Produk**-nya (prompt P1). Detail dan kalau prototype-nya hanya link: `prototype/README.md`.
 5. **Temuan uji cepat jadi task pertama.** Temuan terbesar dari uji cepat di akhir sesi Dana ditulis sebagai task paling atas di `docs/tasks.md`, lengkap dengan cek penerimaannya.
 6. **Token dari DESIGN.md.** Minta agen: "Perbarui `DesignSystem/Tokens.swift` dari `DESIGN.md`. Pakai skill html-ke-swiftui, references/token.md. Tunjukkan tabel nilai lama dan baru sebelum mengubah, lalu build."
-7. **Tes agen:** "Aturan apa yang kamu baca dari repo ini?" (jawabannya menyebut `GEMINI.md` atau `AGENTS.md`), lalu "Jelaskan isi proyek ini dalam lima poin. Jangan ubah file apa pun."
+7. **Prompt pertama: P1** di `docs/kartu-prompt.md`. Agen mengganti nama app dan bundle ID di `Config/Proyek.xcconfig`, menyalin bagian Produk dari `AGENTS.md` Dana, lalu menjawab "Aturan apa yang kamu baca?" (jawabannya menyebut `GEMINI.md` atau `AGENTS.md`).
 
-Folder dari sesi Dana belum ada? Mulai dari contoh Tagih teman yang sudah ada di `docs/`, lalu jalankan `impor-dana.sh` begitu foldernya sampai.
+Folder dari sesi Dana belum ada? Mulai dari contoh Tagih teman yang sudah ada di `docs/`, lalu seret folder Dana begitu sampai.
 
 Lalu bangun layar dari prototype, satu layar per loop: **`docs/dari-html-ke-swiftui.md`**.
 
@@ -45,7 +35,7 @@ Sprint 0 selesai (checkpoint Jumat 13.25) kalau: satu layar inti dari user flow 
 
 ```
 README.md                  file ini
-docs/mulai-di-xcode.md     setup Mac build: proyek, agen, skill, izin, iPhone
+docs/mulai-di-xcode.md     setup Mac kelompok: proyek, agen, skill, izin, iPhone
 docs/cara-kerja-tim.md     peran, rotasi, git, merge conflict, linimasa
 docs/dari-html-ke-swiftui.md  prototype HTML ke layar SwiftUI: empat langkah, prompt, peran
 docs/kartu-prompt.md       prompt P0–P16 siap salin, nomornya sama dengan di slide
@@ -85,7 +75,7 @@ Features/Contoh/           layar contoh: pola yang diikuti agen. Ganti dengan la
 Services/                  LayananData (protokol), LayananDummy (default), LayananSupabase, SumberData, DemoFlags
 Tests/                     Swift Testing
 supabase/                  migration dan data dummy untuk jalur opsional
-scripts/                   mulai.sh, impor-dana.sh, cek-build.sh, cek-rahasia.sh, simulator-demo.sh, pasang-skill.sh
+scripts/                   cadangan untuk mentor (Terminal): mulai.sh, impor-dana.sh, cek-build.sh, cek-rahasia.sh, simulator-demo.sh, pasang-skill.sh
 ```
 
 Nama target dan scheme tetap "Prototipe"; nama yang tampil di layar adalah nama app kalian (`NAMA_APP`).
@@ -126,7 +116,7 @@ bash scripts/simulator-demo.sh rekam marketing/video/demo.mov
 
 ## Baca berikutnya
 
-1. `docs/mulai-di-xcode.md`: setup Mac build.
+1. `docs/mulai-di-xcode.md`: setup Mac kelompok.
 2. `docs/cara-kerja-tim.md`: peran dan rotasi sebelum sprint 0.
 3. `docs/dari-html-ke-swiftui.md`: dari prototype HTML ke layar SwiftUI.
 4. `AGENTS.md`: aturan yang dibaca agen. Isi bagian Produk.

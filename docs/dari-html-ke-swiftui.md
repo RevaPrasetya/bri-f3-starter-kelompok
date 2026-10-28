@@ -4,7 +4,7 @@ Untuk Jumat 30 Okt, dari setup (11.40) sampai sprint 0 (13.00–13.25). Agen: An
 
 Prototype HTML dari sesi Dana adalah **acuan**: isi, urutan, copy, alur dan warna. Bukan kode yang disalin. Hasilnya app iPhone native: navigasi, daftar, form dan tombol bawaan iOS, teks yang ikut setelan ukuran pengguna, dan empat state per layar.
 
-**`docs/PRD.md` dan `docs/userflow.md` menentukan apa yang dibangun** (job story, kriteria sukses, MoSCoW). **Prototype menentukan seperti apa** (tata letak, copy). Kalau keduanya bertentangan, Navigator yang memutuskan.
+**`docs/PRD.md` dan `docs/userflow.md` menentukan apa yang dibangun** (job story, kriteria sukses, MoSCoW). **Prototype menentukan seperti apa** (tata letak, copy). Kalau keduanya bertentangan, Product Owner yang memutuskan.
 
 Sebelum mulai:
 
@@ -24,7 +24,7 @@ layar prototype yang tidak ada di userflow, langkah tanpa prototype, state yang 
 yang belum ada di DesignSystem, dan data yang tampak asli. Jangan ubah file apa pun.
 ```
 
-Navigator mengecek: setiap layar Must punya baris, dan setiap celah diputuskan (bangun, tunda, atau tanya Dana). Keputusan yang mengubah konteks dicatat di `docs/context-gaps.md`.
+Product Owner mengecek: setiap layar Must punya baris, dan setiap celah diputuskan (bangun, tunda, atau tanya Dana). Keputusan yang mengubah konteks dicatat di `docs/context-gaps.md`.
 
 ## Langkah 2 · Token ke DESIGN.md dan Tokens.swift (±10 menit)
 
@@ -37,7 +37,7 @@ Tunggu persetujuan kami sebelum mengubah file. Setelah disetujui, ubah DESIGN.md
 bersamaan, lalu build.
 ```
 
-Reviewer mengecek: perubahan `primary` disetujui tim, nilai mode gelap ikut diisi, dan tidak ada hex di `Features/`.
+Operator mengecek: perubahan `primary` disetujui tim, nilai mode gelap ikut diisi, dan tidak ada hex di `Features/`.
 
 ## Langkah 3 · Satu layar per loop (±25 menit per layar)
 
@@ -94,12 +94,12 @@ Setiap kali agen meleset: satu baris di `docs/context-gaps.md`. Kalau berulang, 
 | Peran | Di alur ini |
 | --- | --- |
 | **Operator AI** | Menempel prompt, satu layar per loop. Menunjukkan tabel, diff dan preview ke tim |
-| **Navigator** | Mengecek inventaris: setiap layar prototype menempel ke satu langkah di `docs/userflow.md`. Memutuskan celah: Must atau tunda |
-| **Reviewer** | Membaca diff: komponen native (`NavigationStack`, `List`, `Form`, `.sheet`, `TabView`), warna, teks, spacing dan radius dari `Tokens.swift`. Menolak hex, `WKWebView`, frame tetap |
+| **Product Owner** | Mengecek inventaris: setiap layar prototype menempel ke satu langkah di `docs/userflow.md`. Memutuskan celah: Must atau tunda |
+| **Operator AI** | Membaca diff: komponen native (`NavigationStack`, `List`, `Form`, `.sheet`, `TabView`), warna, teks, spacing dan radius dari `Tokens.swift`. Menolak hex, `WKWebView`, frame tetap |
 | **Tester** | Membandingkan app di Simulator dengan prototype (screenshot dibuka di sebelahnya): isi, urutan, copy. Mengecek empat state (Edit Scheme › Run › Arguments) dan teks terbesar (Environment Overrides di debug bar Xcode). Mencatat yang meleset di `docs/context-gaps.md` |
 
 ## Kalau prototype belum lengkap
 
 - Hanya ada link: lihat `prototype/README.md` › Kalau hanya ada link.
 - Satu langkah tidak punya prototype: agen membangun dari `DESIGN.md` dan `docs/userflow.md`, lalu menyebutnya di laporan.
-- Prototype dan board bertentangan: scope dari board dan `docs/PRD.md`, tata letak dan copy dari prototype. Navigator memutuskan, lalu catat di `docs/DECISIONS.md`.
+- Prototype dan board bertentangan: scope dari board dan `docs/PRD.md`, tata letak dan copy dari prototype. Product Owner memutuskan, lalu catat di `docs/DECISIONS.md`.

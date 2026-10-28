@@ -3,7 +3,7 @@
 Nomor P di slide menunjuk ke prompt di file ini. Salin, ganti bagian dalam [kurung siku] dengan milik kelompok kalian, lalu tempel ke agen.
 
 - Satu prompt, satu task. Percakapan baru untuk task berikutnya.
-- Operator AI menulis peran saat ini di awal prompt, misalnya "Operator: Ayu · Reviewer: Dedi".
+- Operator AI menulis peran saat ini di awal prompt, misalnya "Operator: Ayu · Tester: Dedi · Product Owner: Sari".
 - Agen gagal dua kali dengan prompt yang sama? Berhenti. Kembali ke commit hijau terakhir, cari konteks yang kurang, atau angkat tangan.
 
 Contoh di bawah memakai app "Tagih teman". Ganti nama layar, file dan task dengan milik kelompok kalian.
@@ -11,7 +11,7 @@ Contoh di bawah memakai app "Tagih teman". Ganti nama layar, file dan task denga
 | ID | Prompt | Kapan |
 | --- | --- | --- |
 | P0 | Board ke docs/ (cadangan) | Setup, kalau folder dari sesi Dana belum lengkap |
-| P1 | Cek konteks | Setup, sebelum prompt kerja pertama |
+| P1 | Nama app dan cek konteks | Setup, sebelum prompt kerja pertama |
 | P2 | Inventaris prototype | Sprint 0 |
 | P3 | Token ke DESIGN.md | Sprint 0, sekali |
 | P4 | Rencana dulu | Setiap task |
@@ -19,7 +19,7 @@ Contoh di bawah memakai app "Tagih teman". Ganti nama layar, file dan task denga
 | P6 | Bandingkan dengan screenshot | Setelah P5 |
 | P7 | Test dulu, baru kode | Sprint 1 dan 2 |
 | P8 | Build gagal: baca log | Kapan saja build merah |
-| P9 | Jelaskan diff | Reviewer, sebelum commit |
+| P9 | Jelaskan diff | Sebelum commit |
 | P10 | Aksesibilitas | Sprint 2 |
 | P11 | Agen sebagai tester | Uji silang |
 | P12 | Temuan jadi bug report dan task | Uji silang |
@@ -36,13 +36,14 @@ Contoh di bawah memakai app "Tagih teman". Ganti nama layar, file dan task denga
 Ini foto board kelompok kami dari sesi Dana: job story, ide terpilih, irisan alur dengan state wajib, MoSCoW, asumsi, dan dua kriteria sukses. Salin isinya ke docs/job-story.md, docs/PRD.md (Feature scope MoSCoW dan Kriteria sukses), docs/userflow.md (langkah dan state per layar) dan docs/tasks.md (satu task per langkah Must, dengan cek penerimaan). Pakai format template yang ada. Jangan menambah apa pun yang tidak ada di foto. Kalau tulisan tidak terbaca, tulis [?]. Jangan ubah kode. Tampilkan ringkasannya untuk kami cek.
 ```
 
-**P1 · Cek konteks.**
+**P1 · Nama app dan cek konteks.** Setelah folder Dana diseret ke repo (docs/, DESIGN.md, prototype/).
 
 ```text
-Sebelum mulai: aturan apa yang kamu baca untuk proyek ini? Sebutkan file-nya dan tiga aturan terpenting. Lalu ringkas docs/job-story.md dan docs/PRD.md dalam tiga kalimat, termasuk baris Won't dan dua kriteria sukses. Kalau ada yang kosong atau tidak jelas, tulis di docs/context-gaps.md. Jangan ubah kode.
+Sebelum mulai: aturan apa yang kamu baca untuk proyek ini? Sebutkan file-nya dan tiga aturan terpenting.
+Lalu: (1) di Config/Proyek.xcconfig ganti NAMA_APP jadi "[Nama App]" dan BUNDLE_ID_DASAR jadi id.workshop.f3.kelompok[N], lalu build. (2) Salin bagian "Produk" dari [path AGENTS.md Dana, misalnya ~/Desktop/kelompok-3-dana/AGENTS.md] ke bagian Produk di AGENTS.md repo ini; bagian lain jangan diubah. (3) Ringkas docs/job-story.md dan docs/PRD.md dalam tiga kalimat, termasuk baris Won't dan dua kriteria sukses. Kalau ada yang kosong atau tidak jelas, tulis di docs/context-gaps.md. Jangan ubah file Swift.
 ```
 
-Jawaban yang benar menyebut AGENTS.md (dan GEMINI.md). Kalau tidak, konteksnya belum terbaca: angkat tangan.
+Jawaban yang benar menyebut AGENTS.md (dan GEMINI.md). Kalau tidak, konteksnya belum terbaca: angkat tangan. Setelah build hijau: Xcode › Integrate › Commit.
 
 ## Dari prototype HTML ke SwiftUI
 
@@ -72,7 +73,7 @@ Selesai kalau: [build bersih, test lulus, empat preview, yang terlihat di layar]
 Baca AGENTS.md dan DESIGN.md. Buat rencana untuk brief ini saja: file yang dibuat atau diubah, dan cara kamu memeriksa hasilnya. Jangan menulis kode dulu. Kalau ada yang tidak jelas, tanyakan, jangan menebak.
 ```
 
-Navigator membaca rencananya dan mencoret yang di luar scope. Kalian yang memutuskan.
+Product Owner membaca rencananya dan mencoret yang di luar scope. Kalian yang memutuskan.
 
 **P5 · Satu layar dari prototype.**
 
@@ -104,7 +105,7 @@ Build gagal. Baca build log lengkapnya, cari error pertama, dan jelaskan penyeba
 
 Agen tanpa akses tool Xcode tidak bisa membaca log sendiri. Salin 3 sampai 5 baris di sekitar error pertama dari Issue Navigator (⌘5).
 
-**P9 · Jelaskan diff.** Untuk Reviewer, sebelum commit.
+**P9 · Jelaskan diff.** Sebelum commit; Operator menjelaskan ke tim, Product Owner memutuskan.
 
 ```text
 Jelaskan diff ini sebelum saya commit: file apa yang berubah, kenapa, dan apa risikonya. Tandai bagian yang tidak diminta di task ini.

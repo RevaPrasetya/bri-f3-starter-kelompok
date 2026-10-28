@@ -1,5 +1,5 @@
 // Config/Proyek.xcconfig · setting proyek Prototipe. File ini di-commit, jadi JANGAN isi kunci apa pun di sini.
-// NAMA_APP dan BUNDLE_ID_DASAR diisi oleh scripts/mulai.sh. Boleh diubah dengan tangan, lalu Cmd+B.
+// NAMA_APP dan BUNDLE_ID_DASAR diganti agen lewat prompt P1 (docs/kartu-prompt.md). Boleh diubah dengan tangan, lalu Cmd+B.
 // Di file .xcconfig, "//" memulai komentar.
 
 // Nama app di layar Simulator dan iPhone.
