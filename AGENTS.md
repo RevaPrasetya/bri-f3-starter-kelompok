@@ -37,7 +37,8 @@ Kamu bekerja di prototipe iOS untuk workshop BRI x Apple Developer Academy. Baca
 
 - `App/` entry point, navigasi, `Info.plist`. `Core/` model dan logika murni tanpa UI. `Services/` sumber data. `DesignSystem/` token dan komponen.
 - `Features/<Layar>/` satu folder per layar: `<Layar>View.swift` dan `<Layar>Model.swift`.
-- Pola rujukan: `Features/Contoh/` (view, model, empat preview) dan `Tests/`. Ikuti polanya untuk layar baru.
+- Pola rujukan: `Features/Contoh/` (view, model, satu preview per state) dan `Tests/`. Ikuti polanya untuk layar baru.
+- Layar baru harus tampil saat ⌘R. Kalau layar sebelumnya di alur belum ada, jadikan layar baru layar pertama sementara di `App/PrototipeApp.swift` (ganti `ContohView`). Kalau sudah ada, tambah `case` di `Rute` dan di `tujuan(_:)`. Ini perubahan di luar folder fitur yang selalu boleh; sebutkan di laporan.
 - Di luar target: `Config/` (xcconfig), `supabase/` (SQL, opsional), `skills/` (skill agen), `docs/` dan `bugs/` (konteks), `scripts/`.
 - File baru masuk ke folder yang sesuai. Jangan membuat folder baru di root tanpa bertanya.
 
@@ -64,8 +65,8 @@ Kamu bekerja di prototipe iOS untuk workshop BRI x Apple Developer Academy. Baca
 
 - Setiap layar punya state berhasil, memuat, kosong dan gagal, lewat `StatusMuat` di `Core/StatusMuat.swift`.
 - State bisa dipaksa lewat launch argument, misalnya `-demoContoh gagal` (`Services/DemoFlags.swift`). Layar baru: tambah satu `LayarDemo`; manusia menambah argument-nya di Edit Scheme > Run > Arguments.
-- Setiap state punya `#Preview` sendiri: `#Preview("Berhasil")`, `#Preview("Memuat")`, `#Preview("Kosong")`, `#Preview("Gagal")`.
-- Kalau satu state memang tidak mungkin terjadi di layar itu, tulis alasannya di `docs/userflow.md`.
+- Satu `#Preview` per state di tabel state `docs/userflow.md`: `#Preview("Berhasil")`, `#Preview("Memuat")`, `#Preview("Kosong")`, `#Preview("Gagal")`.
+- State yang ditulis "Tidak ada" di tabel itu tidak dibangun dan tidak dibuat preview-nya. Kalau satu state memang tidak mungkin terjadi, tulis "Tidak ada" dan alasannya di `docs/userflow.md`.
 
 ## Data
 
@@ -98,7 +99,7 @@ Setelah setiap perubahan, urutannya:
 
 1. **Build** dengan tool build Xcode (`BuildProject`), lalu baca build log (`GetBuildLog`). Laporkan error dan warning dari log, bukan tebakan.
 2. **Test**: jalankan semua test (`RunAllTests`). Laporkan jumlah lulus dan gagal. "0 test" berarti scheme salah: pilih scheme `Prototipe`.
-3. **Preview**: render preview setiap view yang berubah (`RenderPreview`) dalam empat state: Berhasil, Memuat, Kosong, Gagal. Lihat gambarnya. Cek juga Berhasil di ukuran teks `.accessibility3`: tidak ada teks atau nominal yang terpotong.
+3. **Preview**: render preview setiap view yang berubah (`RenderPreview`) untuk setiap state di tabel `docs/userflow.md`. Lihat gambarnya. Cek juga Berhasil di ukuran teks `.accessibility3`: tidak ada teks atau nominal yang terpotong.
 4. **Simulator** untuk alur pengguna: jalankan app (`RunProject`), tap alurnya (`DeviceInteraction…`), baca console (`GetConsoleOutput`).
 5. Baru bilang **"selesai"**, dengan bukti: hasil build, jumlah test, preview yang dilihat, langkah yang dicoba. Yang gagal ikut dilaporkan.
 
@@ -132,7 +133,8 @@ Setelah setiap perubahan, urutannya:
 
 - Build bersih, tanpa warning baru.
 - Semua test lulus.
-- Empat preview tampil dan sesuai `DESIGN.md`.
+- Preview setiap state di `docs/userflow.md` tampil dan sesuai `DESIGN.md`.
+- Layar baru tampil saat ⌘R.
 - Alur dicoba di Simulator; console tanpa error baru.
 - Cek penerimaan task di `docs/tasks.md` terpenuhi.
 - Tidak ada perubahan di luar task.

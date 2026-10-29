@@ -24,4 +24,4 @@ Sumber aturan utama adalah `AGENTS.md` di root repo. Buka dan ikuti file itu seb
 - Prototype HTML di `prototype/` adalah acuan isi, copy, alur dan token, bukan markup. Bangun SwiftUI native (`NavigationStack`, `List`, `Form`, `.sheet`), token lewat `DESIGN.md` dan `Tokens.swift`, tanpa `WKWebView`. Langkahnya: `docs/dari-html-ke-swiftui.md`.
 - Baca `docs/DECISIONS.md` sebelum mengubah perilaku yang sudah ada; tambahkan entri setelah keputusan baru.
 - Laporan bug: minta screenshot dan baris log bila belum ada. Tulis test yang gagal dulu, lalu perbaiki akar masalahnya.
-- Sebelum bilang selesai: build bersih, semua test lulus, empat preview tampil, alur dicoba di Simulator. Laporkan yang gagal juga. Cek `git status` sebelum commit.
+- Sebelum bilang selesai: build bersih, semua test lulus, preview tiap state di userflow tampil, alur dicoba di Simulator. Laporkan yang gagal juga. Cek `git status` sebelum commit.

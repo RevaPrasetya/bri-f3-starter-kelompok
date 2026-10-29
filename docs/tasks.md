@@ -6,6 +6,7 @@ Draf v1 · 14 Okt 2026 · masih bisa diperbarui
 
 Aturan:
 - Urut dari atas: task berikutnya boleh bergantung pada task sebelumnya.
+- Task layar pertama juga menjadikannya layar pertama app (`App/PrototipeApp.swift`), supaya langsung tampil saat ⌘R.
 - Satu task = satu diff yang bisa direview dalam 2 menit.
 - Cek penerimaan harus bisa diperiksa: test lulus, preview tampil, atau langkah yang bisa diulang orang lain.
 - Jumat 13.40: urutkan. Sebelum sprint 1 (14.10): pilih 3 task.
@@ -38,13 +39,13 @@ Hapus bagian contoh setelah kalian mengisi. -->
 
 - [ ] 3. Layar Buka transaksi
   - Yang dikerjakan: daftar transaksi dari riwayat, tombol "Tagih teman" pada transaksi terpilih.
-  - File: `Features/PilihTransaksi/`
-  - Cek penerimaan: 4 preview (berhasil, memuat, kosong, gagal) tampil; "Tagih teman" membuka Pilih teman.
+  - File: `Features/PilihTransaksi/`, dan `App/PrototipeApp.swift` (jadi layar pertama app)
+  - Cek penerimaan: preview tiap state di userflow tampil; layar ini tampil saat ⌘R; "Tagih teman" membuka Pilih teman.
 
 - [ ] 4. Layar Pilih teman
   - Yang dikerjakan: daftar kontak dummy, pencarian, pilih banyak, tombol "Lanjut".
   - File: `Features/PilihTeman/`
-  - Cek penerimaan: 4 preview tampil; "Lanjut" nonaktif bila belum ada teman terpilih.
+  - Cek penerimaan: preview tiap state tampil; "Lanjut" nonaktif bila belum ada teman terpilih.
 
 - [ ] 5. Layar Bagi rata
   - Yang dikerjakan: ringkasan bagian tiap teman dan bagian pengirim dari `SplitCalculator`.
@@ -59,4 +60,4 @@ Hapus bagian contoh setelah kalian mengisi. -->
 - [ ] 7. Layar Pantau status dan uji kriteria sukses
   - Yang dikerjakan: status Lunas / Belum per teman; sambungkan layar 01–05 dengan `NavigationStack`.
   - File: `Features/PantauStatus/`, `App/`
-  - Cek penerimaan: 4 preview tampil; satu orang di luar kelompok mengirim tagihan dari Buka transaksi sampai Pantau status dalam 60 detik tanpa bantuan, di Simulator atau perangkat.
+  - Cek penerimaan: preview tiap state tampil; satu orang di luar kelompok mengirim tagihan dari Buka transaksi sampai Pantau status dalam 60 detik tanpa bantuan, di Simulator atau perangkat.

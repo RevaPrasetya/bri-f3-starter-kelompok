@@ -18,7 +18,7 @@ Lalu, **sekali per Mac**, impor skill: Xcode › Settings › Intelligence › *
 
 ## Masih di setup
 
-4. **Masukkan folder kelompok dari sesi Dana.** Folder itu berisi `AGENTS.md`, `DESIGN.md`, `docs/` (job story, user flow, PRD, tasks) dan `prototype/index.html`. Di Finder, buka folder Dana dan folder repo ini berdampingan, lalu seret **`docs/`**, **`DESIGN.md`**, dan **`prototype/`** dari folder Dana ke folder repo. Kalau Finder bertanya, pilih **Replace**. `AGENTS.md` Dana jangan diseret: minta agen menyalin bagian **Produk**-nya (prompt P1). Detail dan kalau prototype-nya hanya link: `prototype/README.md`.
+4. **Masukkan folder kelompok dari sesi Dana.** Folder itu berisi `AGENTS.md`, `DESIGN.md`, `docs/` (job story, user flow, PRD, tasks) dan `prototype/index.html`. Di Finder, buka folder Dana dan folder repo ini berdampingan. Untuk docs: buka folder `docs/` Dana, ⌘A, lalu seret **isinya** ke folder `docs/` repo ini. **Jangan seret folder `docs/`-nya**: Replace akan menghapus dokumen starter (kartu prompt, DECISIONS.md, panduan Xcode). Kalau Finder bertanya, centang Apply to All, lalu **Replace**. Setelah itu seret **`DESIGN.md`** dan folder **`prototype/`**; keduanya boleh diganti. `AGENTS.md` Dana jangan diseret: minta agen menyalin bagian **Produk**-nya (prompt P1). Detail dan kalau prototype-nya hanya link: `prototype/README.md`.
 5. **Temuan uji cepat jadi task pertama.** Temuan terbesar dari uji cepat di akhir sesi Dana ditulis sebagai task paling atas di `docs/tasks.md`, lengkap dengan cek penerimaannya.
 6. **Token dari DESIGN.md.** Minta agen: "Perbarui `DesignSystem/Tokens.swift` dari `DESIGN.md`. Pakai skill html-ke-swiftui, references/token.md. Tunjukkan tabel nilai lama dan baru sebelum mengubah, lalu build."
 7. **Prompt pertama: P1** di `docs/kartu-prompt.md`. Agen mengganti nama app dan bundle ID di `Config/Proyek.xcconfig`, menyalin bagian Produk dari `AGENTS.md` Dana, lalu menjawab "Aturan apa yang kamu baca?" (jawabannya menyebut `GEMINI.md` atau `AGENTS.md`).
@@ -27,7 +27,7 @@ Folder dari sesi Dana belum ada? Mulai dari contoh Tagih teman yang sudah ada di
 
 Lalu bangun layar dari prototype, satu layar per loop: **`docs/dari-html-ke-swiftui.md`**.
 
-Sprint 0 selesai (checkpoint Jumat 13.25) kalau: satu layar inti dari user flow dan prototype, empat preview (berhasil, memuat, kosong, gagal), jalan di Simulator, dan minimal satu celah konteks di Miro kelompok.
+Sprint 0 selesai (checkpoint Jumat 13.25) kalau: satu layar inti dari user flow dan prototype, satu preview per state di tabel userflow, tampil saat ⌘R di Simulator, dan minimal satu celah konteks di Miro kelompok.
 
 ## Peta repo
 

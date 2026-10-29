@@ -68,7 +68,7 @@ Pakai skill html-ke-swiftui, langkah 2. Ambil token dari prototype (CSS variable
 Tujuan: [apa yang harus selesai, satu kalimat]
 Konteks: [file, layar, task di docs/tasks.md, screenshot]
 Batasan: [yang tidak boleh diubah atau ditambah]
-Selesai kalau: [build bersih, test lulus, empat preview, yang terlihat di layar]
+Selesai kalau: [build bersih, test lulus, preview tiap state, yang terlihat di layar]
 
 Baca AGENTS.md dan DESIGN.md. Buat rencana untuk brief ini saja: file yang dibuat atau diubah, dan cara kamu memeriksa hasilnya. Jangan menulis kode dulu. Tanyakan saya mengenai [bagian yang belum jelas, misalnya aturan pembulatan atau isi state gagal] satu per satu, dengan rekomendasimu. Jangan menebak.
 ```
@@ -78,7 +78,7 @@ Product Owner membaca rencananya dan mencoret yang di luar scope. Kalian yang me
 **P5 · Satu layar dari prototype.**
 
 ```text
-Pakai skill html-ke-swiftui, langkah 3. Bangun layar [Pilih teman] ([T4] di docs/tasks.md) dari prototype/[file] dan prototype/screenshots/[nama].png. Jangan menyalin struktur div. Pakai komponen native: NavigationStack dengan navigationTitle, List atau Form, sheet, safeAreaInset untuk tombol yang menempel di bawah, text style Dynamic Type dan token dari Tokens.swift. Jangan pakai WKWebView. Prototype hanya menunjukkan state berhasil: state memuat, kosong dan gagal (beserta teksnya) ambil dari tabel state di docs/userflow.md. Buat satu #Preview per state di tabel itu, lalu jalankan Loop Xcode dari AGENTS.md.
+Pakai skill html-ke-swiftui, langkah 3. Bangun layar [Pilih teman] ([T4] di docs/tasks.md) dari prototype/[file] dan prototype/screenshots/[nama].png. Jangan menyalin struktur div. Pakai komponen native: NavigationStack dengan navigationTitle, List atau Form, sheet, safeAreaInset untuk tombol yang menempel di bawah, text style Dynamic Type dan token dari Tokens.swift. Jangan pakai WKWebView. Prototype hanya menunjukkan state berhasil: state memuat, kosong dan gagal (beserta teksnya) ambil dari tabel state di docs/userflow.md. Buat satu #Preview per state di tabel itu (state "Tidak ada" dilewati). Pastikan layar ini tampil saat ⌘R: kalau layar sebelumnya belum ada, jadikan layar pertama sementara di App/PrototipeApp.swift. Lalu jalankan Loop Xcode dari AGENTS.md.
 ```
 
 **P6 · Bandingkan dengan screenshot.**
