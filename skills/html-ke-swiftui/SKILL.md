@@ -61,7 +61,7 @@ Lalu daftar **celah**, satu baris per temuan:
 - komponen yang belum ada di `DesignSystem/`;
 - data yang tampak asli (nama, nomor, nominal) yang harus diganti dummy.
 
-Usulkan baris untuk `docs/context-gaps.md` untuk celah yang perlu keputusan tim. Tunggu jawaban Navigator.
+Daftarkan celah yang perlu keputusan tim di akhir jawaban, satu baris per celah, supaya tim bisa menempelnya di Miro. Tunggu jawaban Product Owner.
 
 ### Langkah 2 · Token dulu
 
