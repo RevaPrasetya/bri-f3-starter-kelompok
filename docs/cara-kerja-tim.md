@@ -7,7 +7,7 @@ Satu **Mac** per kelompok, layarnya ditampilkan ke tim. Agen mengedit kode hanya
 | Peran | Tugas |
 | --- | --- |
 | **Operator AI** | Satu-satunya yang mengetik ke agen. Hanya satu percakapan agen yang mengedit file pada satu waktu. Menjelaskan setiap perubahan ke tim sebelum commit (P9), menolak solusi "asal jalan": force unwrap, `@unchecked Sendable`, test dilemahkan. Commit setiap build hijau |
-| **Tester** | Mengecek empat state (berhasil, memuat, kosong, gagal) di Simulator atau iPhone sendiri. Menulis bug di `bugs/` (salin `bugs/_template.md`) dan satu baris di `docs/context-gaps.md` setiap agen salah. Saat agen meleset, menambah satu baris aturan di `AGENTS.md` |
+| **Tester** | Mengecek empat state (berhasil, memuat, kosong, gagal) di Simulator atau iPhone sendiri. Menempel temuan dan celah konteks di Miro kelompok, satu sticky per temuan; temuan teratas ditulis jadi bug report di `bugs/` (salin `bugs/_template.md`). Saat agen meleset, menambah satu baris aturan di `AGENTS.md` |
 | **Product Owner** | Menjaga job story dan scope (hanya Must). Membaca rencana agen dan mencoret yang di luar task. Mengurutkan `docs/tasks.md`, memilih task berikutnya, memotong scope kalau waktu habis |
 
 Tiga peran ini masih **draf** (usulan F3, dikonfirmasi dengan Kak Dana). Kelompok berlima: dua Tester.

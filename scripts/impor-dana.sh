@@ -33,7 +33,7 @@ simpan() {
 }
 
 DISALIN=""
-STARTER_SAJA=" context-gaps.md DECISIONS.md cara-kerja-tim.md dari-html-ke-swiftui.md mulai-di-xcode.md supabase-opsional.md "
+STARTER_SAJA=" DECISIONS.md cara-kerja-tim.md dari-html-ke-swiftui.md mulai-di-xcode.md supabase-opsional.md "
 
 # 1. docs/: job-story, userflow, PRD, tasks, dan .md lain dari sesi Dana
 if [ -d "$SUMBER/docs" ]; then

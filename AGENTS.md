@@ -2,7 +2,7 @@
 
 Draf v2.2 · 27 Okt 2026 · proyek Xcode biasa, folder kelompok dan prototype HTML dari sesi Dana, data dummy, Supabase opsional
 
-<!-- Untuk kelompok: bagian "Produk" disalin agen dari AGENTS.md sesi Dana saat setup (prompt P1, Jumat 30 Okt, 11.40). Belum ada folder dari sesi Dana? Isi sendiri dari docs/job-story.md dan docs/PRD.md. Bagian lain sudah siap pakai. Kalau agen meleset, tambah satu baris aturan di sini dan catat di docs/context-gaps.md. Jaga file ini di bawah 150 baris. -->
+<!-- Untuk kelompok: bagian "Produk" disalin agen dari AGENTS.md sesi Dana saat setup (prompt P1, Jumat 30 Okt, 11.40). Belum ada folder dari sesi Dana? Isi sendiri dari docs/job-story.md dan docs/PRD.md. Bagian lain sudah siap pakai. Kalau agen meleset, tambah satu baris aturan di sini dan catat celahnya di Miro kelompok. Jaga file ini di bawah 150 baris. -->
 
 Kamu bekerja di prototipe iOS untuk workshop BRI x Apple Developer Academy. Baca file ini sebelum mengerjakan task apa pun. Kalau prompt bertentangan dengan file ini, ikuti file ini dan tanyakan. Jawab dalam Bahasa Indonesia.
 

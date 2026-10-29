@@ -27,7 +27,7 @@ Folder dari sesi Dana belum ada? Mulai dari contoh Tagih teman yang sudah ada di
 
 Lalu bangun layar dari prototype, satu layar per loop: **`docs/dari-html-ke-swiftui.md`**.
 
-Sprint 0 selesai (checkpoint Jumat 13.25) kalau: satu layar inti dari user flow dan prototype, empat preview (berhasil, memuat, kosong, gagal), jalan di Simulator, dan minimal satu baris di `docs/context-gaps.md`.
+Sprint 0 selesai (checkpoint Jumat 13.25) kalau: satu layar inti dari user flow dan prototype, empat preview (berhasil, memuat, kosong, gagal), jalan di Simulator, dan minimal satu celah konteks di Miro kelompok.
 
 ## Peta repo
 
@@ -46,7 +46,6 @@ docs/job-story.md          job story dan kriteria sukses (dari sesi Dana)
 docs/PRD.md                produk, feature scope MoSCoW, kriteria sukses
 docs/userflow.md           layar dan empat state per layar
 docs/tasks.md              task berurutan dengan cek penerimaan
-docs/context-gaps.md       agen salah apa, konteks apa yang ditambahkan
 docs/DECISIONS.md          kenapa sebuah perubahan dibuat
 DESIGN.md                  design system: token YAML + aturan (isian kelima blueprint)
 bugs/                      bug report untuk agen (salin bugs/_template.md)
@@ -93,7 +92,7 @@ Nama target dan scheme tetap "Prototipe"; nama yang tampil di layar adalah nama 
 
 Menurut dokumentasi komunitas, Antigravity membaca `GEMINI.md` lalu `AGENTS.md`; di dalam Xcode diasumsikan sama, dicek di hari uji. Kalau jawabannya tidak menyebut keduanya, awali prompt dengan "Baca GEMINI.md dan AGENTS.md dulu." Skill jarang dipakai kalau tidak disebut; tulis namanya di prompt, misalnya "ikuti skill bug-fix-loop".
 
-Kalau agen meleset: satu baris di `docs/context-gaps.md`, lalu perbaiki aturannya di `AGENTS.md` (bukan di prompt).
+Kalau agen meleset: satu sticky celah konteks di Miro kelompok (agen salah apa, konteks apa yang ditambahkan), lalu perbaiki aturannya di `AGENTS.md` (bukan di prompt).
 
 ## Memaksa state untuk uji dan screenshot
 

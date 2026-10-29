@@ -18,7 +18,6 @@ docs/
   userflow.md        alur dan state per layar
   tasks.md           task berurutan dengan cek penerimaan
   DECISIONS.md       log keputusan: kenapa perubahan dibuat
-  context-gaps.md    log kesalahan agen dan konteks yang memperbaikinya
   prototype/            prototype HTML dari sesi Dana + screenshots/ (acuan, bukan kode; skill html-ke-swiftui)
   dari-html-ke-swiftui.md  langkah prototype HTML ke layar SwiftUI
 App/                 entry point, navigasi, Info.plist

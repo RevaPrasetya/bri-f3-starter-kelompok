@@ -91,4 +91,4 @@ Kartu `rounded.lg` (`Radius.l`). Ikon dan elemen kecil `rounded.sm`. Tombol utam
 - Satu aksi utama per layar.
 - Nominal lewat `Rupiah.format(_:)`: "Rp125.000", tanpa desimal.
 - Copy Bahasa Indonesia, kalimat pendek, nada tenang.
-- Jangan membuat komponen baru kalau yang di atas sudah cukup. Kalau perlu, catat dulu di `docs/context-gaps.md`.
+- Jangan membuat komponen baru kalau yang di atas sudah cukup. Kalau perlu, tanyakan dulu.

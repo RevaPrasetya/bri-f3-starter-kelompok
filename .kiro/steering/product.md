@@ -13,7 +13,7 @@ Dokumen produk kelompok:
 #[[file:docs/PRD.md]]
 
 - Alur per layar: `docs/userflow.md` · task harian: `docs/tasks.md`
-- Design system: `DESIGN.md` (root) · celah konteks agen: `docs/context-gaps.md`
+- Design system: `DESIGN.md` (root) · celah konteks agen: dicatat di Miro kelompok
 - Spec Kiro (opsional): `.kiro/specs/[fitur]/`. Tugas yang dikerjakan tetap mengikuti `docs/tasks.md`
 
 Kalau sebuah task tidak membantu job story di atas, tanyakan dulu sebelum mengerjakannya.

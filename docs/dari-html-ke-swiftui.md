@@ -24,7 +24,7 @@ layar prototype yang tidak ada di userflow, langkah tanpa prototype, state yang 
 yang belum ada di DesignSystem, dan data yang tampak asli. Jangan ubah file apa pun.
 ```
 
-Product Owner mengecek: setiap layar Must punya baris, dan setiap celah diputuskan (bangun, tunda, atau tanya Dana). Keputusan yang mengubah konteks dicatat di `docs/context-gaps.md`.
+Product Owner mengecek: setiap layar Must punya baris, dan setiap celah diputuskan (bangun, tunda, atau tanya Dana). Keputusan yang mengubah konteks ditempel di Miro kelompok.
 
 ## Langkah 2 · Token ke DESIGN.md dan Tokens.swift (±10 menit)
 
@@ -87,7 +87,7 @@ Beda yang wajar (daftar a): judul besar dan tombol kembali bawaan, separator daf
 | Nama dan nominal dari prototype ditulis di view | Susah diganti, tidak bisa dites | "Pindahkan ke data dummy di Services/." |
 | Status bar palsu, menu hamburger, breadcrumb | Pola web atau gambar prototype | "Hapus. Pakai navigasi bawaan iOS." |
 
-Setiap kali agen meleset: satu baris di `docs/context-gaps.md`. Kalau berulang, tambahkan aturannya ke `AGENTS.md`.
+Setiap kali agen meleset: satu sticky celah konteks di Miro kelompok. Kalau berulang, tambahkan aturannya ke `AGENTS.md`.
 
 ## Siapa mengerjakan apa
 
@@ -96,7 +96,7 @@ Setiap kali agen meleset: satu baris di `docs/context-gaps.md`. Kalau berulang, 
 | **Operator AI** | Menempel prompt, satu layar per loop. Menunjukkan tabel, diff dan preview ke tim |
 | **Product Owner** | Mengecek inventaris: setiap layar prototype menempel ke satu langkah di `docs/userflow.md`. Memutuskan celah: Must atau tunda |
 | **Operator AI** | Membaca diff: komponen native (`NavigationStack`, `List`, `Form`, `.sheet`, `TabView`), warna, teks, spacing dan radius dari `Tokens.swift`. Menolak hex, `WKWebView`, frame tetap |
-| **Tester** | Membandingkan app di Simulator dengan prototype (screenshot dibuka di sebelahnya): isi, urutan, copy. Mengecek empat state (Edit Scheme › Run › Arguments) dan teks terbesar (Environment Overrides di debug bar Xcode). Mencatat yang meleset di `docs/context-gaps.md` |
+| **Tester** | Membandingkan app di Simulator dengan prototype (screenshot dibuka di sebelahnya): isi, urutan, copy. Mengecek empat state (Edit Scheme › Run › Arguments) dan teks terbesar (Environment Overrides di debug bar Xcode). Mencatat yang meleset di Miro kelompok |
 
 ## Kalau prototype belum lengkap
 
