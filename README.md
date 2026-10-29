@@ -39,6 +39,7 @@ docs/mulai-di-xcode.md     setup Mac kelompok: proyek, agen, skill, izin, iPhone
 docs/cara-kerja-tim.md     peran, rotasi, git, merge conflict, linimasa
 docs/dari-html-ke-swiftui.md  prototype HTML ke layar SwiftUI: empat langkah, prompt, peran
 docs/kartu-prompt.md       prompt P0–P16 siap salin, nomornya sama dengan di slide
+docs/hooks.md              hook: pagar pengaman otomatis untuk agen (tools/hooks/)
 prototype/                 prototype HTML dari sesi Dana + screenshots/ (sekarang berisi contoh)
 docs/supabase-opsional.md  jalur Supabase, setelah alur utama jalan
 docs/job-story.md          job story dan kriteria sukses (dari sesi Dana)

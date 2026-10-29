@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeSubmitPrompt": [
+      { "command": "tools/hooks/cek-rahasia.sh", "failClosed": true }
+    ],
+    "beforeShellExecution": [
+      { "command": "tools/hooks/blokir-perintah.sh", "failClosed": true }
+    ],
+    "afterFileEdit": [
+      { "command": "tools/hooks/lint-setelah-edit.sh" }
+    ]
+  }
+}
