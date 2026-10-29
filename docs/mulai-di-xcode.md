@@ -26,7 +26,7 @@ Agen peserta adalah **Antigravity** (Google), dengan lisensi Gemini BRI. Claude 
 
 1. Xcode › Settings › **Intelligence** › **Agents** › **Antigravity** › **Get** › **Install**.
 2. Login: klik **…** di baris **Account**, ikuti sheet dan browser. Masuk dengan **akun Google yang membawa lisensi Gemini BRI**. (Asumsi: lisensi itu bisa dipakai di Antigravity; dicek di hari uji.)
-3. **Permissions**: tambahkan `git`, `swiftlint`, `xcrun`, `mkdir`, dan `mdls` di **Allowed Commands**. Tool Xcode (build, test, preview, Simulator) sudah termasuk. `xcrun` dipakai agen untuk merekam video dan mengambil screenshot Simulator (P15); tanpa ini, agen akan minta izin tiap kali atau gagal merekam.
+3. **Permissions**: tambahkan `git`, `swiftlint`, `xcrun`, `mkdir`, `mdls`, `kill`, dan `sleep` di **Allowed Commands**. Tool Xcode (build, test, preview, Simulator) sudah termasuk. `xcrun` dipakai agen untuk merekam video dan mengambil screenshot Simulator (P15); tanpa ini, agen akan minta izin tiap kali atau gagal merekam.
 
 Login gagal atau menu Intelligence kosong? Jangan lebih dari 5 menit. Beri tahu fasilitator F3, lalu pakai cadangan berurutan:
 
