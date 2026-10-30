@@ -1,16 +1,16 @@
-# Starter kelompok · prototipe iOS
+# Starter prototipe iOS
 
-Workshop BRI x Apple Developer Academy · Kamis 29 – Sabtu 31 Okt 2026 · Fasilitator 3
+Titik awal untuk membangun prototipe app iOS bersama agen AI di Xcode. Starter ini membawa hasil sesi desain (job story, user flow, PRD, design system, prototype HTML) sampai menjadi layar SwiftUI native yang jalan di Simulator atau iPhone, dengan test dan aturan yang dibaca agen.
 
-Titik awal prototipe kelompok: proyek Xcode `Prototipe.xcodeproj` yang langsung jalan, satu layar contoh dengan empat state, test, aturan untuk agen (`AGENTS.md`, `GEMINI.md`), 45 skill, dan template konteks di `docs/`. Data dummy saja; Supabase opsional.
+Isinya: proyek Xcode `Prototipe.xcodeproj` yang langsung jalan, satu layar contoh dengan empat state, test, aturan untuk agen (`AGENTS.md`, `GEMINI.md`), 45 skill, dan template konteks di `docs/`. Data dummy saja; Supabase opsional.
 
-Hasil sesi Dana masuk ke sini: prototype HTML ke `prototype/`; job story, prioritized flow, feature scope dan kriteria sukses ke `docs/`; design system ke `DESIGN.md`. Prototype menjadi layar SwiftUI native lewat `docs/dari-html-ke-swiftui.md`.
+Hasil sesi desain masuk ke sini: prototype HTML ke `prototype/`; job story, prioritized flow, feature scope dan kriteria sukses ke `docs/`; design system ke `DESIGN.md`. Prototype menjadi layar SwiftUI native lewat `docs/dari-html-ke-swiftui.md`.
 
-## Mulai dalam 3 langkah (Jumat 30 Okt, 11.40)
+## Mulai dalam 3 langkah
 
 Tanpa Terminal. Cukup Finder, Xcode, dan agen.
 
-1. **Unduh.** Buka link/QR starter dari grup WhatsApp, klik tombol hijau **Code › Download ZIP**, double-click ZIP-nya di Downloads, lalu ganti nama foldernya jadi `kelompok-N` (N = nomor kelompok). Cukup di **satu Mac** per kelompok.
+1. **Unduh.** Buka halaman repo ini di GitHub, klik tombol hijau **Code › Download ZIP**, double-click ZIP-nya di Downloads, lalu ganti nama foldernya jadi `kelompok-N` (N = nomor kelompok). Cukup di **satu Mac** per kelompok.
 2. **Buka dan jalankan.** Double-click `Prototipe.xcodeproj` (kalau Xcode bertanya karena proyek diunduh dari internet, pilih **Open**). Pilih simulator iPhone terbaru di daftar, **⌘R**: layar "Contoh" tampil. **⌘U**: semua test lulus.
 3. **Nyalakan git.** Xcode › **Integrate › New Git Repository…** › Create. Setelah itu commit lewat Xcode › Integrate › Commit (⌥⌘C).
 
@@ -18,16 +18,16 @@ Lalu, **sekali per Mac**, impor skill: Xcode › Settings › Intelligence › *
 
 ## Masih di setup
 
-4. **Masukkan folder kelompok dari sesi Dana.** Folder itu berisi `AGENTS.md`, `DESIGN.md`, `docs/` (job story, user flow, PRD, tasks) dan `prototype/index.html`. Di Finder, buka folder Dana dan folder repo ini berdampingan. Untuk docs: buka folder `docs/` Dana, ⌘A, lalu seret **isinya** ke folder `docs/` repo ini. **Jangan seret folder `docs/`-nya**: Replace akan menghapus dokumen starter (kartu prompt, DECISIONS.md, panduan Xcode). Kalau Finder bertanya, centang Apply to All, lalu **Replace**. Setelah itu seret **`DESIGN.md`** dan folder **`prototype/`**; keduanya boleh diganti. `AGENTS.md` Dana jangan diseret: minta agen menyalin bagian **Produk**-nya (prompt P1). Detail dan kalau prototype-nya hanya link: `prototype/README.md`.
-5. **Temuan uji cepat jadi task pertama.** Temuan terbesar dari uji cepat di akhir sesi Dana ditulis sebagai task paling atas di `docs/tasks.md`, lengkap dengan cek penerimaannya.
+4. **Masukkan folder kelompok dari sesi desain.** Folder itu berisi `AGENTS.md`, `DESIGN.md`, `docs/` (job story, user flow, PRD, tasks) dan `prototype/index.html`. Di Finder, buka folder hasil desain dan folder repo ini berdampingan. Untuk docs: buka folder `docs/` dari sesi desain, ⌘A, lalu seret **isinya** ke folder `docs/` repo ini. **Jangan seret folder `docs/`-nya**: Replace akan menghapus dokumen starter (kartu prompt, DECISIONS.md, panduan Xcode). Kalau Finder bertanya, centang Apply to All, lalu **Replace**. Setelah itu seret **`DESIGN.md`** dan folder **`prototype/`**; keduanya boleh diganti. `AGENTS.md` dari sesi desain jangan diseret: minta agen menyalin bagian **Produk**-nya (prompt P1). Detail dan kalau prototype-nya hanya link: `prototype/README.md`.
+5. **Temuan uji cepat jadi task pertama.** Temuan terbesar dari uji cepat di akhir sesi desain ditulis sebagai task paling atas di `docs/tasks.md`, lengkap dengan cek penerimaannya.
 6. **Token dari DESIGN.md.** Minta agen: "Perbarui `DesignSystem/Tokens.swift` dari `DESIGN.md`. Pakai skill html-ke-swiftui, references/token.md. Tunjukkan tabel nilai lama dan baru sebelum mengubah, lalu build."
-7. **Prompt pertama: P1** di `docs/kartu-prompt.md`. Agen mengganti nama app dan bundle ID di `Config/Proyek.xcconfig`, menyalin bagian Produk dari `AGENTS.md` Dana, lalu menjawab "Aturan apa yang kamu baca?" (jawabannya menyebut `GEMINI.md` atau `AGENTS.md`).
+7. **Prompt pertama: P1** di `docs/kartu-prompt.md`. Agen mengganti nama app dan bundle ID di `Config/Proyek.xcconfig`, menyalin bagian Produk dari `AGENTS.md` sesi desain, lalu menjawab "Aturan apa yang kamu baca?" (jawabannya menyebut `GEMINI.md` atau `AGENTS.md`).
 
-Folder dari sesi Dana belum ada? Mulai dari contoh Tagih teman yang sudah ada di `docs/`, lalu seret folder Dana begitu sampai.
+Folder dari sesi desain belum ada? Mulai dari contoh Tagih teman yang sudah ada di `docs/`, lalu seret foldernya begitu sampai.
 
 Lalu bangun layar dari prototype, satu layar per loop: **`docs/dari-html-ke-swiftui.md`**.
 
-Sprint 0 selesai (checkpoint Jumat 13.25) kalau: satu layar inti dari user flow dan prototype, satu preview per state di tabel userflow, tampil saat ⌘R di Simulator, dan minimal satu celah konteks di Miro kelompok.
+Sprint 0 selesai kalau: satu layar inti dari user flow dan prototype, satu preview per state di tabel userflow, tampil saat ⌘R di Simulator, dan minimal satu celah konteks di Miro kelompok.
 
 ## Peta repo
 
@@ -40,9 +40,9 @@ docs/cara-kerja-tim.md     peran, rotasi, git, merge conflict, linimasa
 docs/dari-html-ke-swiftui.md  prototype HTML ke layar SwiftUI: empat langkah, prompt, peran
 docs/kartu-prompt.md       prompt P0–P16 siap salin, nomornya sama dengan di slide
 docs/hooks.md              hook: pagar pengaman otomatis untuk agen (tools/hooks/)
-prototype/                 prototype HTML dari sesi Dana + screenshots/ (sekarang berisi contoh)
+prototype/                 prototype HTML dari sesi desain + screenshots/ (sekarang berisi contoh)
 docs/supabase-opsional.md  jalur Supabase, setelah alur utama jalan
-docs/job-story.md          job story dan kriteria sukses (dari sesi Dana)
+docs/job-story.md          job story dan kriteria sukses (dari sesi desain)
 docs/PRD.md                produk, feature scope MoSCoW, kriteria sukses
 docs/userflow.md           layar dan empat state per layar
 docs/tasks.md              task berurutan dengan cek penerimaan
@@ -56,7 +56,7 @@ bugs/                      bug report untuk agen (salin bugs/_template.md)
 ```
 AGENTS.md                  aturan untuk semua agen, satu sumber. Isi bagian Produk
 GEMINI.md                  dibaca Antigravity lebih dulu: aturan inti, lalu AGENTS.md
-CLAUDE.md                  mengimpor AGENTS.md untuk Claude (demo fasilitator)
+CLAUDE.md                  mengimpor AGENTS.md untuk Claude
 .github/copilot-instructions.md   salinan aturan inti untuk Copilot
 .kiro/steering/ .kiro/settings/mcp.json   aturan tambahan dan MCP untuk Kiro
 .mobilebuildmcp/config.yaml        MobileBuildMCP untuk agen di luar Xcode
@@ -75,7 +75,7 @@ Features/Contoh/           layar contoh: pola yang diikuti agen. Ganti dengan la
 Services/                  LayananData (protokol), LayananDummy (default), LayananSupabase, SumberData, DemoFlags
 Tests/                     Swift Testing
 supabase/                  migration dan data dummy untuk jalur opsional
-scripts/                   cadangan untuk mentor (Terminal): mulai.sh, impor-dana.sh, cek-build.sh, cek-rahasia.sh, simulator-demo.sh, pasang-skill.sh
+scripts/                   cadangan lewat Terminal: mulai.sh, impor-dana.sh, cek-build.sh, cek-rahasia.sh, simulator-demo.sh, pasang-skill.sh
 ```
 
 Nama target dan scheme tetap "Prototipe"; nama yang tampil di layar adalah nama app kalian (`NAMA_APP`).
@@ -84,13 +84,13 @@ Nama target dan scheme tetap "Prototipe"; nama yang tampil di layar adalah nama 
 
 | Agen | File aturan | Skill |
 | --- | --- | --- |
-| **Antigravity di Xcode** (agen peserta) | `GEMINI.md`, lalu `AGENTS.md` | Plug-in Xcode dari `skills/` |
-| Claude Agent (demo fasilitator), Codex di Xcode | `AGENTS.md` (Claude lewat `CLAUDE.md`) | Plug-in Xcode dari `skills/` |
+| **Antigravity di Xcode** | `GEMINI.md`, lalu `AGENTS.md` | Plug-in Xcode dari `skills/` |
+| Claude Agent, Codex di Xcode | `AGENTS.md` (Claude lewat `CLAUDE.md`) | Plug-in Xcode dari `skills/` |
 | Kiro | `AGENTS.md` langsung, plus `.kiro/steering/` dan MCP di `.kiro/settings/mcp.json` | `bash scripts/pasang-skill.sh kiro` |
 | Copilot for Xcode | `.github/copilot-instructions.md`. Setiap `AGENTS.md` berubah, samakan bagian "Aturan inti" | Sebut isi skill di prompt |
 | Claude Code, Copilot CLI, Gemini CLI | `CLAUDE.md` / `AGENTS.md` / `GEMINI.md` | `bash scripts/pasang-skill.sh claude` atau `agents` |
 
-Menurut dokumentasi komunitas, Antigravity membaca `GEMINI.md` lalu `AGENTS.md`; di dalam Xcode diasumsikan sama, dicek di hari uji. Kalau jawabannya tidak menyebut keduanya, awali prompt dengan "Baca GEMINI.md dan AGENTS.md dulu." Skill jarang dipakai kalau tidak disebut; tulis namanya di prompt, misalnya "ikuti skill bug-fix-loop".
+Menurut dokumentasi komunitas, Antigravity membaca `GEMINI.md` lalu `AGENTS.md`; di dalam Xcode diasumsikan sama. Kalau jawabannya tidak menyebut keduanya, awali prompt dengan "Baca GEMINI.md dan AGENTS.md dulu." Skill jarang dipakai kalau tidak disebut; tulis namanya di prompt, misalnya "ikuti skill bug-fix-loop".
 
 Kalau agen meleset: satu sticky celah konteks di Miro kelompok (agen salah apa, konteks apa yang ditambahkan), lalu perbaiki aturannya di `AGENTS.md` (bukan di prompt).
 
