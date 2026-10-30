@@ -167,6 +167,8 @@ Hasilnya di marketing/raw/ (screenshot), marketing/framed/ (kalau skill framing 
 
 Sebelum P15, pastikan `xcrun`, `mkdir`, `mdls`, `kill`, dan `sleep` ada di Allowed Commands agen (Xcode › Settings › Intelligence › Permissions; lihat docs/mulai-di-xcode.md langkah 3). Simulator harus sudah jalan dari ⌘R terakhir. Agen pertama membaca docs/userflow.md untuk tahu alur yang direkam.
 
+Yang terjadi saat diuji (Claude Agent di Xcode, Tagih teman): sekitar 15 menit, dengan belasan permintaan izin (pilih Allow). Video mentah bisa lebih dari 30 detik karena jeda di awal: potong di QuickTime Player (Edit › Trim, ⌘T), tanpa install apa pun.
+
 Agen gagal merekam? Cadangan tanpa agen: di jendela Simulator (Device Hub) ada tombol rekam dan tombol screenshot di toolbar bawah. Satu orang menjalankan alur 20–30 detik, lalu simpan file-nya ke marketing/video/.
 
 ## Kalau agen meleset

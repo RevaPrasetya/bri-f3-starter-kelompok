@@ -45,7 +45,9 @@ xcrun simctl ui booted appearance light
 
 Use the accessibility tree, not guessed coordinates. In order of preference:
 
-- MobileBuildMCP tools `snapshot_ui`, `tap`, `type_text`, `screenshot` (skill `mobilebuildmcp`)
+- Xcode's own device interaction tools (built in for agents inside Xcode; they tap, read the screen and take screenshots)
+
+- MobileBuildMCP tools `snapshot_ui`, `tap`, `type_text`, `screenshot` (skill `mobilebuildmcp`). If it fails because `xcode-select` points to CommandLineTools, do not change it (that needs sudo); use Xcode's tools instead
 - the `agent-device` CLI (skill `ios-simulator`), if the user has installed it
 - an XCUITest UI test that walks the flow (skill `flow-walkthrough` or `screenshot-automation`)
 
@@ -70,6 +72,8 @@ Headlines: at most 5 words, sell the benefit, not the feature name. Example: "Ta
 
 ## 4. Demo video
 
+Walk the flow once without recording first, so you know every step. Then relaunch the app on the first screen and record. Start the recorder only when the next tool call is the first tap: a long idle start makes the video too long.
+
 Record the same flow from the start, with short pauses on each screen:
 
 ```bash
@@ -93,7 +97,7 @@ ffmpeg -i marketing/video/demo-raw.mov -vf "scale=886:1920,fps=30" \
   -c:v libx264 -pix_fmt yuv420p -an marketing/video/demo-886x1920.mp4
 ```
 
-If neither is available, `demo-raw.mov` is the deliverable.
+If neither is available, `demo-raw.mov` is the deliverable. If it is longer than 30 seconds, do not install anything: tell the user to trim it in QuickTime Player (open the file, Edit › Trim or ⌘T, drag the yellow handles, Save) and give the start and end second to keep.
 
 ## 5. Clean up and report
 
