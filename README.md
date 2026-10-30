@@ -23,7 +23,7 @@ Lalu, **sekali per Mac**, impor skill: Xcode › Settings › Intelligence › *
 6. **Token dari DESIGN.md.** Minta agen: "Perbarui `DesignSystem/Tokens.swift` dari `DESIGN.md`. Pakai skill html-ke-swiftui, references/token.md. Tunjukkan tabel nilai lama dan baru sebelum mengubah, lalu build."
 7. **Prompt pertama: P1** di `docs/kartu-prompt.md`. Agen mengganti nama app dan bundle ID di `Config/Proyek.xcconfig`, menyalin bagian Produk dari `AGENTS.md` sesi desain, lalu menjawab "Aturan apa yang kamu baca?" (jawabannya menyebut `GEMINI.md` atau `AGENTS.md`).
 
-Folder dari sesi desain belum ada? Mulai dari contoh Tagih teman yang sudah ada di `docs/`, lalu seret foldernya begitu sampai.
+Folder dari sesi desain belum ada? Lihat **`contoh-sesi-desain/`**: contoh lengkap hasil sesi desain (Tagih teman) termasuk prototype HTML. Bisa dipakai sebagai titik awal, lalu ganti dengan folder kalian begitu sampai.
 
 Lalu bangun layar dari prototype, satu layar per loop: **`docs/dari-html-ke-swiftui.md`**.
 
@@ -40,6 +40,7 @@ docs/cara-kerja-tim.md     peran, rotasi, git, merge conflict, linimasa
 docs/dari-html-ke-swiftui.md  prototype HTML ke layar SwiftUI: empat langkah, prompt, peran
 docs/kartu-prompt.md       prompt P0–P16 siap salin, nomornya sama dengan di slide
 docs/hooks.md              hook: pagar pengaman otomatis untuk agen (tools/hooks/)
+contoh-sesi-desain/        contoh lengkap hasil sesi desain (Tagih teman): docs, DESIGN.md, prototype HTML
 prototype/                 prototype HTML dari sesi desain + screenshots/ (sekarang berisi contoh)
 docs/supabase-opsional.md  jalur Supabase, setelah alur utama jalan
 docs/job-story.md          job story dan kriteria sukses (dari sesi desain)

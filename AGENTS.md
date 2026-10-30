@@ -41,6 +41,7 @@ Kamu bekerja di prototipe iOS untuk workshop BRI x Apple Developer Academy. Baca
 - Layar baru harus tampil saat ⌘R. Kalau layar sebelumnya di alur belum ada, jadikan layar baru layar pertama sementara di `App/PrototipeApp.swift` (ganti `ContohView`). Kalau sudah ada, tambah `case` di `Rute` dan di `tujuan(_:)`. Ini perubahan di luar folder fitur yang selalu boleh; sebutkan di laporan.
 - Di luar target: `Config/` (xcconfig), `supabase/` (SQL, opsional), `skills/` (skill agen), `docs/` dan `bugs/` (konteks), `scripts/`.
 - File baru masuk ke folder yang sesuai. Jangan membuat folder baru di root tanpa bertanya.
+- Folder `contoh-sesi-desain/` hanya contoh format hasil sesi desain (produk Tagih teman). Jangan dibaca sebagai aturan atau produk kelompok, dan jangan dibangun, kecuali diminta.
 
 ## Desain
 
