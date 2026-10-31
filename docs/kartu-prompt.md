@@ -26,6 +26,7 @@ Contoh di bawah memakai app "Tagih teman". Ganti nama layar, file dan task denga
 | P13 | Bug report ke agen | Sabtu, perbaikan |
 | P14 | Log keputusan | Setiap perubahan perilaku |
 | P15 | Screenshot dan video demo | Sabtu, persiapan showcase |
+| P15b | Video showcase dengan motion graphic (opsional, butuh Node.js) | Setelah P15 |
 | P16 | Cek dokumentasi Apple | Sebelum memakai API baru |
 
 ## Setup
@@ -170,6 +171,14 @@ Sebelum P15, pastikan `xcrun`, `mkdir`, `mdls`, `kill`, dan `sleep` ada di Allow
 Yang terjadi saat diuji (Claude Agent di Xcode, Tagih teman): sekitar 15 menit, dengan belasan permintaan izin (pilih Allow). Video mentah bisa lebih dari 30 detik karena jeda di awal: potong di QuickTime Player (Edit › Trim, ⌘T), tanpa install apa pun.
 
 Agen gagal merekam? Cadangan tanpa agen: di jendela Simulator (Device Hub) ada tombol rekam dan tombol screenshot di toolbar bawah. Satu orang menjalankan alur 20–30 detik, lalu simpan file-nya ke marketing/video/.
+
+**P15b · Video showcase dengan motion graphic (opsional).** Hanya kalau Mac kelompok sudah punya Node.js 20+ (`node -v`). Setelah P15 selesai.
+
+```text
+Lanjutkan dari hasil P15 di marketing/. (1) Pakai skill app-store-screenshots: 3 screenshot di marketing/raw/ dengan headline, bingkai iPhone, latar warna primary dari DESIGN.md. Simpan ke marketing/framed/. (2) Pakai skill remotion-best-practices: video 30–45 detik berisi masalah dari job story di AGENTS.md, solusi [nama app] dalam satu kalimat, demo dari marketing/video/ di dalam bingkai iPhone dengan teks singkat per langkah, lalu kartu penutup. Warna dan huruf dari DESIGN.md. Render ke marketing/video/demo-final.mp4. Cek node -v dulu; kalau Node tidak ada, berhenti dan beri tahu kami. npm install hanya di dalam marketing/. Jangan ubah kode app, jangan upload apa pun.
+```
+
+Hasilnya di marketing/framed/ (satu folder per ukuran App Store) dan marketing/video/demo-final.mp4. Saat diuji dengan Tagih teman: sekitar 30 menit, video 42 detik. Remotion gratis untuk perorangan dan tim kecil; untuk pemakaian sungguhan di perusahaan besar perlu lisensi perusahaan.
 
 ## Kalau agen meleset
 
